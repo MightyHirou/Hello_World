@@ -4,3 +4,70 @@ color = raw_input("What is your favorite color?")
 
 print "Ah, so your name is %s, your quest is %s, " \
 "and your favorite color is %s." % (name, quest, color)
+
+
+
+
+
+#inputting date in dd/mm/yyyy format
+
+from datetime import datetime
+now = datetime.now()
+
+print '%02d-%02d-%04d' % (now.month, now.day, now.year)
+
+
+
+
+
+
+#date and time 
+
+from datetime import datetime
+now = datetime.now()
+
+print ("%02d/%02d/%04d %02d:%02d:%02d") % (now.month, now.day, now.year, now.hour, now.minute, now.second)
+
+
+
+
+
+
+
+# Madlibs string input practice
+
+
+"""
+This program generates passages that are generated in mad-lib format
+Author: Katherin 
+"""
+
+# The template for the story
+
+STORY = "This morning %s woke up feeling %s. 'It is going to be a %s day!' Outside, a bunch of %ss were protesting to keep %s in stores. They began to %s to the rhythm of the %s, which made all the %ss very %s. Concerned, %s texted %s , who flew %s to %s and dropped %s in a puddle of frozen %s. %s woke up in the year %s, in a world where %ss ruled the world. %s %s"
+
+print ("""Mad Libs has started!
+Have fun!""")
+
+name = raw_input("Enter a name: ")
+
+#adj reffers to adjective
+adj_1 = raw_input("Enter an adjective: ")
+adj_2 = raw_input("Enter another adjective: ")
+adj_3 = raw_input("Enter one last adjective: ")
+
+verb = raw_input("Enter a verb: ")
+
+noun_1 = raw_input("Enter a noun: ")
+noun_2 = raw_input("Enter one more noun: ")
+
+#Misc variables
+animal = raw_input("Enter an animal: ")
+food = raw_input("Enter a food: ")
+fruit = raw_input("Enter a fruit: ")
+hero = raw_input("Enter a superhero: ")
+country = raw_input("Enter a country: ")
+dessert = raw_input("Enter a dessert: ")
+year = raw_input("Enter a year: ")
+
+print str(STORY) % (name, adj_1, adj_2, animal, food, verb, noun_1, fruit, adj_3, name, hero, name, country, name, dessert, name, dessert, name, year, noun_2)
